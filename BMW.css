@@ -1,0 +1,261 @@
+@import 'animate.css';
+
+/* ---------- GLOBAL STYLES ---------- */
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  width: 100%;
+  height: auto;
+  /* background-color: aquamarine; */
+}
+
+video {
+  object-fit: cover;
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+footer {
+  position: relative;
+  width: 100%;
+  color: #fff;
+}
+
+#con1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  font-size: 20px;
+  padding: 10px 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+hr {
+  width: 95%;
+  margin: auto;
+}
+
+#img1:hover {
+  transition: 0.5s ease-in-out;
+  transform: rotate(360deg);
+}
+
+h4 {
+  animation: slide 3s;
+}
+
+@keyframes slide {
+  from {
+    color: white;
+  }
+  to {
+    color: silver;
+  }
+}
+
+/* ---------- MENULIST ---------- */
+#men_list {
+  width: 100%;
+  display: none;
+  position: absolute;
+  margin-top: 24px;
+  background-color: white;
+  z-index: 10;
+}
+
+.ul1 {
+  display: contents;
+}
+
+.men_list:hover #men_list {
+  display: block;
+}
+
+.underline {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.underline::after {
+  content: '';
+  position: absolute;
+  bottom: -15px;
+  width: 100%;
+  height: 5px;
+  background-color: rgb(18, 73, 240);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: left;
+}
+
+.underline:hover::after {
+  transform: scaleX(1);
+}
+
+/* ---------- SECTION 1 ---------- */
+#section1 {
+  margin-top: 160px;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+}
+
+#section1 > h1,
+td > h1 {
+  font-weight: 100;
+  font-family: bmwTypeNextWeb, Arial, sans-serif;
+  text-shadow: 0px 3px 17px rgb(67, 53, 53);
+}
+
+table {
+  width: 100%;
+  background-color: white;
+  text-align: center;
+}
+
+tr > td {
+  padding: 20px;
+}
+
+button {
+  width: 90%;
+  max-width: 180px;
+  height: 60px;
+  margin: 10px auto;
+  box-shadow: 5px 4px 14px rgb(129, 117, 197);
+  border: 2px solid black;
+}
+
+/* ---------- SECTIONS ---------- */
+.section2 {
+  width: 100%;
+  height: 600px;
+  background-size: cover;
+  color: white;
+  font-weight: 900;
+  font-size: 1.2rem;
+  padding-top: 60px;
+  top:20px;
+}
+
+/* ---------- BUTTONS ---------- */
+.button {
+  background-color: rgb(138, 84, 37);
+  width: 160px;
+  height: 60px;
+  border-radius: 10px;
+  color: white;
+  margin: 20px 0 0 20px;
+}
+
+/* ---------- LOCATIONS GRID ---------- */
+#div1 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 10px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 10px;
+}
+
+.dd {
+  text-align: center;
+  font-weight: 300;
+  font-size: 11px;
+  color: #fff;
+}
+
+/* ---------- FOOTER BOX ---------- */
+#lt {
+  width: 100%;
+  padding: 20px 0;
+  background-color: rgb(48, 46, 46);
+}
+
+/* ---------- SPAN CONTAINER ---------- */
+#spann {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+.spann {
+  background-color: rgb(133, 130, 130);
+  padding: 5px;
+  width: 100px;
+  height: auto;
+}
+
+/* ---------- CAR IMAGE ANIMATION ---------- */
+#car {
+  animation: slide 3s infinite;
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------- WHATSAPP ICON ---------- */
+.whatsapp-icon {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  z-index: 999;
+}
+
+/* ---------- MEDIA QUERIES ---------- */
+@media (max-width: 768px) {
+  #con1 {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .section2 {
+    height: auto;
+    padding: 40px 10px;
+  }
+
+  #section1 h1,
+  td h1 {
+    font-size: 1.5rem;
+  }
+
+  .spann {
+    width: 45%;
+  }
+
+  #div1 {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  button {
+    width: 90%;
+  }
+
+  .button {
+    margin: 20px auto;
+    display: block;
+  }
+}
